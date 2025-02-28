@@ -1,0 +1,23 @@
+type Query {
+    accounts: [BankAccount]
+}
+
+type BankAccount {
+    id:ID
+    balance: Float!
+    client: Client!
+    currency: Currency!
+    status: String!
+
+}
+
+type Client {
+    id:ID
+    firstName: String!
+    middleName: String
+    lastName: String!
+}
+
+enum Currency {
+    EUR, USD, CAD, INR
+}
